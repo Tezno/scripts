@@ -16,10 +16,10 @@ squeue
 # Job information
 ```
 sacct -j $SLURM_JOB_ID --format=JobID,State,Partition,Start,End,Elapsed,NCPUS,alloctres%35
+sacct -j $SLURM_JOB_ID --format=JobID,State,NCPUS,alloctres%35,NodeList%50
 ```
-
 # Generate token for specific user with life lifespan
-scontrol token username=$USER lifespan=99999999999
+scontrol token username=$USER lifespan=999999999
 
 # Example CURL
 # GET Job
