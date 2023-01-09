@@ -56,7 +56,7 @@ curl --location --request POST "$SLURM_URL/job/submit" \
     "job": {
         "name":"theophile",
         "current_working_directory":"/tmp/",
-        "standard_output":"/mnt/inscale-data/theophile-test.log",
+        "standard_output":"/tmp/log/theophile-test.log",
         "environment":{
             "PATH":"/bin:/usr/bin/:/usr/local/bin/",
             "LD_LIBRARY_PATH":"/lib/:/lib64/:/usr/local/lib"
