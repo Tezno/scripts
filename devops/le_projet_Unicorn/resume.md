@@ -15,6 +15,7 @@
 # Trosième Idéal: amélioration du travail quotidien
 
 - Placer l'amélioration du travail quotidien au dessus du travail lui même
+- le contraire suivre les processus à la lettre et appliques la règle "On A Toujours Fait Comme Ça"
 
 # Quatrième Idéal: sécurité psychologique
 
@@ -29,3 +30,8 @@
 - To edit file `entities.excalidraw`
 - ![Entities](entities.png)
 - Pas de hierarchi entre les différentes entités
+
+# Dettes technique
+
+- Fait partie de la vie
+- Pas bonne ou mauvaise juste un sous produit
