@@ -10,7 +10,7 @@ echo "N_TASKS_SLAVES: $N_TASKS_SLAVES" >> $LOG
 srun \
     --ntasks $N_TASKS_SLAVES \
     --exact \
-    -o /mnt/inscale-data/log/test/slave-%t.log \
+    -o "$LOG_DIR/slave-%t.log" \
     slave.sh &
 
 echo "MASTER: $SLURM_PROCID" >> $LOG
