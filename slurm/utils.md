@@ -26,31 +26,41 @@ scontrol show jobid -dd 5020
 
 # Generate token for specific user with life lifespan
 
+```
 scontrol token username=$USER lifespan=999999999
+```
 
 # Example CURL
+
+```
+export SLURM_API_USER_TOKEN=
+export SLURM_API_USER_NAME=
+export SLURM_URL=http://10.0.0.145:8080/slurm/v0.0.37
+
+```
 
 # GET Job
 
 ```
-curl --location --request GET 'http://$IP:8080/slurm/v0.0.37/jobs' \
+curl --location --request GET "$SLURM_URL/diag" \
+--header "X-SLURM-USER-TOKEN: $SLURM_API_USER_TOKEN" \
+--header "X-SLURM-USER-NAME: $SLURM_API_TOKEN"
+```
+
+## Get version of api
+
+```
+curl --location --request GET 'http://10.0.0.81:8080/openapi.json' \
 --header 'X-SLURM-USER-TOKEN: $SLURM_API_USER_TOKEN' \
---header 'X-SLURM-USER-NAME: $SLURM_API_TOKEN'
+--header 'X-SLURM-USER-NAME: $SLURM_API_USER_NAME'
 ```
 
 # POST Job
 
 ```
-export SLURM_API_USER_TOKEN=
-export SLURM_API_TOKEN=
-export SLURM_URL=http://10.0.0.145:8080/slurm/v0.0.37
-
-```
-
-```
 curl --location --request POST "$SLURM_URL/job/submit" \
---header "X-SLURM-USER-TOKEN: $SLURM_API_TOKEN" \
---header "X-SLURM-USER-NAME: $SLURM_API_USER_TOKEN" \
+--header "X-SLURM-USER-TOKEN: $SLURM_API_USER_TOKEN" \
+--header "X-SLURM-USER-NAME: $SLURM_API_USER_NAME" \
 --header 'Content-Type: application/json' \
 --data '{
     "job": {
