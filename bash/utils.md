@@ -19,3 +19,6 @@
 # Listing services under systemd
 
 `systemctl --type=service`
+
+# Get all open ports
+`sudo netstat -tulpn`
