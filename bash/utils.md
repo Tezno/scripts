@@ -22,3 +22,6 @@
 
 # Get all open ports
 `sudo netstat -tulpn`
+
+# Get PID open port
+`sudo lsof -n -i :80`
