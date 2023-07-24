@@ -31,3 +31,7 @@
 
 # Debug command
 `strace -ff -e verbose=all trace=execve -v -p 1234`
+
+# Delete directories with day
+`find . -type d -mtime +1 -exec ls -ld {} \;`
+`find . -type d -mtime +1 -exec rm -rf {} \;`
