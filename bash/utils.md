@@ -25,3 +25,9 @@
 
 # Get PID open port
 `sudo lsof -n -i :80`
+
+# Exec script file without exec file
+`sh -c "echo hello > helloworld.txt && cat helloworld.txt"`
+
+# Debug command
+`strace -ff -e verbose=all trace=execve -v -p 1234`
