@@ -23,6 +23,10 @@ sacct -j $SLURM_JOB_ID --format=JobID,State,Partition,Start,End,Elapsed,NCPUS,al
 sacct -j $SLURM_JOB_ID --format=JobID,State,NCPUS,alloctres%35,NodeList%50
 scontrol show jobid -dd 5020
 ```
+# Job list with date
+```
+sacct --starttime 2023-07-21T13:40:00 --format=User,JobID,Jobname%50,state,time,start,end,elapsed,nnodes,ncpus,nodelist
+```
 
 # Generate token for specific user with life lifespan
 
