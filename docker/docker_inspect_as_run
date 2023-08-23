@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker inspect --format "$(cat docker_inspect_as_docker_run_template.tpl)" $*
