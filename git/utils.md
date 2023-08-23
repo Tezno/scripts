@@ -14,6 +14,7 @@
 ## Reset file
 
 `git reset HEAD^`
+`git reset <commit_id>`
 
 ## Edit all files
 
