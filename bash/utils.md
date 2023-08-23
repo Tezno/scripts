@@ -20,11 +20,17 @@
 
 `systemctl --type=service`
 
-# Get all open ports
+# Get all open ports from host
 `sudo netstat -tulpn`
 
 # Get PID open port
 `sudo lsof -n -i :80`
+
+# Check open port on remote (tcp)
+`echo > /dev/tcp/[host]/[port] && echo "Port is open"`
+
+# Check open port on remote (udp)
+`echo > /dev/udp/[host]/[port] && echo "Port is open"`
 
 # Exec script file without exec file
 `sh -c "echo hello > helloworld.txt && cat helloworld.txt"`
